@@ -30,7 +30,7 @@ class AsynkHttp : AsyncTask<String, Int, Boolean> {
             urlConnection.setRequestMethod("POST")
             urlConnection.setDoOutput(true)
 
-            var postDataSample:String = "name="+name+"&text"+value
+            var postDataSample:String = "name="+name+"&text"+value.toString()
             var out:OutputStream = urlConnection.getOutputStream()
             out.write(postDataSample.toByteArray())
             out.flush()
